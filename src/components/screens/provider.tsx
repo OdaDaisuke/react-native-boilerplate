@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Navigation } from 'react-native-navigation'
 import { Home, HomeVM } from './home'
 import { DomainFactory } from '../../domain'
 

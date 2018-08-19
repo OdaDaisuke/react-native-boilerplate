@@ -2,7 +2,7 @@ import * as React from 'react'
 import { TouchableOpacity, StyleSheet, Text } from 'react-native'
 
 interface IButtonProps {
-  onPress: any
+  onPress?: any
 }
 
 export class Button extends React.Component<IButtonProps, any> {
