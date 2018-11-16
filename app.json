@@ -1,5 +1,30 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0"
+    "name": "react-native-boilerplate",
+    "sdkVersion": "27.0.0",
+    "version": "1.0.3",
+    "slug": "rnboiler",
+    "orientation": "portrait",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "backgroundColor": "#FFF",
+      "resizeMode": "cover"
+    },
+    "packagerOpts": {
+      "sourceExts": ["js", "jsx"]
+    },
+    "updates": {
+      "enabled": false
+    },
+    "ios": {
+      "buildNumber": "1",
+      "supportsTablet": false,
+      "bundleIdentifier": "me.rnboiler.ios"
+    },
+    "android": {
+      "package": "me.rnboiler.android",
+      "permissions": ["CAMERA", "WRITE_EXTERNAL_STORAGE"],
+      "versionCode": 4
+    }
   }
 }
