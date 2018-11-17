@@ -1,3 +1,6 @@
 {
-  "presets": ["react-native", "flow", "react-native-dotenv"]
+  "presets": ["react-native", "flow", "react-native-dotenv"],
+  "plugins": [
+    "transform-decorators-legacy"
+  ]
 }

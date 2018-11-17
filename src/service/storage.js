@@ -1,6 +1,6 @@
 import { AsyncStorage } from 'react-native'
 
-export class Storage {
+export default class Storage {
     constructor() {
     }
 
