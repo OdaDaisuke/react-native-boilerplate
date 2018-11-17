@@ -1,10 +1,14 @@
 import React from 'react'
 import { createStackNavigator } from 'react-navigation'
-import Home from '../screens/home'
+import Header from '../components/parts/Header'
+import Home from '../components/screens/Home'
 
 const routes = {
     Home: {
         screen: Home,
+        navigationOptions: () => ({
+            header: <Header title={'Home'} />
+        })
     }
 }
 

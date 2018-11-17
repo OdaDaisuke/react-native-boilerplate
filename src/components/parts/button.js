@@ -5,8 +5,8 @@ import styles from '../../styles/button.scss'
 export default class Button extends React.Component {
   render() {
     return (
-      <TouchableOpacity className={styles.button} onPress={this.props.onPress}>
-      	<Text>{this.props.children}</Text>
+      <TouchableOpacity style={styles.button} onPress={this.props.onPress}>
+      	<Text style={styles.buttonLabel}>{this.props.children}</Text>
       </TouchableOpacity>
     )
   }
