@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React from 'react'
 import { View } from 'react-native'
 import { createStackNavigator } from 'react-navigation'
-import { DomainFactory } from '../../domain'
+import { DomainFactory } from '../../domain/factory'
 import { ScreenProvider } from '../screens'
 
 const domainFactory = new DomainFactory()

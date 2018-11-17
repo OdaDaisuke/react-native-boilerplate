@@ -1,9 +1,6 @@
 /*
  * 認証管理
  */
-import { AsyncStorage } from 'react-native'
-import { IAuthStatus } from '../interfaces'
-
 const AUTH_STATUS_KEY = "auth_status"
 const AUTH_TOKEN_KEY = "auth_token"
 
@@ -16,7 +13,7 @@ export class Auth {
     /*
      * Auth status
      */
-    saveAuthStatus(authStatus: IAuthStatus) {
+    saveAuthStatus(authStatus) {
         this.save(AUTH_STATUS_KEY, JSON.stringify(authStatus))
     }
 
@@ -31,7 +28,7 @@ export class Auth {
     /*
      * Auth token
      */
-    saveAuthToken(authToken: string) {
+    saveAuthToken(authToken) {
         this.save(AUTH_STATUS_KEY, JSON.stringify(authToken))
     }
 
@@ -46,7 +43,7 @@ export class Auth {
     /*
      * private methods
      */
-    private load(key: string): string | null {
+    load(key) {
         try {
             const v = this.storage.getItem(key)
             if(v) {
@@ -58,7 +55,7 @@ export class Auth {
         }
     }
 
-    private save(key: string, content: string) {
+    save(key, content) {
         this.storage.setItem(key, content)
     }
 }

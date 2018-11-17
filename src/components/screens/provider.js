@@ -1,15 +1,14 @@
-import * as React from 'react'
+import React from 'react'
 import { Home, HomeVM } from './home'
-import { DomainFactory } from '../../domain'
 
 export class ScreenProvider {
-    domainFactory: DomainFactory
+    domainFactory
 
-    constructor(domainFactory: DomainFactory) {
+    constructor(domainFactory) {
         this.domainFactory = domainFactory
     }
 
-    Home(): JSX.Element {
+    Home() {
         const vm = new HomeVM(this.domainFactory.Storage())
         return (
             <Home vm={vm} />

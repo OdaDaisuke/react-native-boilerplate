@@ -1,10 +1,7 @@
-import * as React from 'react'
+import React from 'react'
 import { StyleSheet, TextInput } from 'react-native'
 
-interface IInputLineProps {
-}
-
-export class InputLine extends React.Component<IInputLineProps, any> {
+export class InputLine extends React.Component {
   render() {
     return (
         <TextInput style={this.styles.input} multiline={false}></TextInput>
@@ -13,8 +10,8 @@ export class InputLine extends React.Component<IInputLineProps, any> {
 
   get styles() {
     return StyleSheet.create({
-        input: {
-        },
+      input: {
+      },
     })
   }
 }

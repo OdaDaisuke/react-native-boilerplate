@@ -1,7 +1,7 @@
 import { Storage } from './storage'
 
 export class DomainFactory {
-    storageClient: Storage
+    storageClient
 
     constructor() {
         this.storageClient = new Storage()

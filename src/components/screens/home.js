@@ -1,15 +1,12 @@
-import * as React from 'react'
+import React from 'react'
 import { View, Text } from 'react-native'
-import { Storage } from '../../domain'
+import Button from '../parts/button'
 
-interface IHomeProps {
-    vm: HomeVM
-}
-
-export class Home extends React.Component<IHomeProps, any> {
+export class Home extends React.Component {
     render() {
         return (
             <View>
+                <Button>Press me</Button>
                 <Text>home screen</Text>
             </View>
         )
@@ -17,9 +14,9 @@ export class Home extends React.Component<IHomeProps, any> {
 }
 
 export class HomeVM {
-    storageClient: Storage
+    storageClient
 
-    constructor(storage: Storage) {
+    constructor(storage) {
         this.storageClient = storage
     }
 }
