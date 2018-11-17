@@ -9,7 +9,7 @@ import AppNavigator from './navigator/AppNavigator'
 import { stores } from './stores'
 
 const enhancer = compose(
-    inject("application", "appNavigator"),
+    inject("application", "appNavigation"),
     lifecycle({
         async componentDidMount() {
             // 何か処理
@@ -18,12 +18,14 @@ const enhancer = compose(
     observer,
 )
 
-const App = enhancer(({application, appNavigator}: Object) => {
+const App = enhancer(({application, appNavigation}: Object) => {
     const navigation = addNavigationHelpers({
         addListener: () => {},
-        dispatch: appNavigator.dispatch,
-        state: appNavigator.navigationState,
+        dispatch: appNavigation.dispatch,
+        state: appNavigation.navigationState,
     })
+
+    appNavigation.setNavigation(navigation)
 
     return <AppNavigator navigation={navigation} />
 

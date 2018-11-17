@@ -4,7 +4,7 @@ import AppNavigatorStore from './AppNavigatorStore'
 
 const stores = {
   application: new ApplicationStore(),
-  appNavigator: new AppNavigatorStore(),
+  appNavigation: new AppNavigatorStore(),
 }
 
 const actions = {

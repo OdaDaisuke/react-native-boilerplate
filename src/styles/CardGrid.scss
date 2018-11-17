@@ -1,8 +1,8 @@
-.cardList {
+.cardGrid {
     flex-wrap: wrap;
 }
 
-.cardListItem {
+.cardGridItem {
     align-items: center;
     background-color: #2aa1e6;
     border-radius: 6px;
@@ -16,7 +16,7 @@
     margin-bottom: 8px;
 }
 
-.cardListLabel {
+.cardGridLabel {
     color: #fff;
     font-size: 15px;
     font-weight: 500;

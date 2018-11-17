@@ -2,14 +2,14 @@
 
 import React from 'react'
 import { FlatList } from 'react-native'
-import CardListItem from './CardListItem'
-import styles from '../../styles/CardList.scss'
+import CardGridItem from './CardGridItem'
+import styles from '../../styles/CardGrid.scss'
 
-type CardListProps = {
+type CardGridProps = {
     cols: number
 }
 
-export default (props: CardListProps) => {
+export default (props: CardGridProps) => {
     const data = [{
         title: "SF",
     }, {
@@ -27,9 +27,9 @@ export default (props: CardListProps) => {
     return (
         <FlatList
             numColumns={props.cols}
-            style={styles.cardList}
+            style={styles.cardGrid}
             data={data}
-            renderItem={ ( {item} ) => <CardListItem {...item} /> }
+            renderItem={ ( {item} ) => <CardGridItem {...item} /> }
         />
     )
 }

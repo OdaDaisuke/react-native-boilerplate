@@ -1,5 +1,6 @@
 .header {
     align-items: center;
+    background-color: #235ea9;
     flex-direction: row;
     justify-content: center;
     padding: 28px 0 20px;
@@ -8,7 +9,21 @@
 }
 
 .label {
+    color: #fff;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 1px;
+}
+
+.backIconContainer {
+    bottom: 10px;
+    left: 0;
+    justify-content: center;
+    position: absolute;
+}
+
+.backIcon {
+    color: #fff;
+    font-size: 27px;
+    margin-left: 25px;
 }
