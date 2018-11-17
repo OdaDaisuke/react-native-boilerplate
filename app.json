@@ -11,7 +11,8 @@
       "resizeMode": "cover"
     },
     "packagerOpts": {
-      "sourceExts": ["js", "jsx"]
+      "sourceExts": ["js", "jsx", "scss"],
+      "transformer": "node_modules/react-native-sass-transformer/index.js"
     },
     "updates": {
       "enabled": false

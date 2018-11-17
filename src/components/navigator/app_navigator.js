@@ -1,29 +1,16 @@
 import React from 'react'
-import { View } from 'react-native'
 import { createStackNavigator } from 'react-navigation'
-import { DomainFactory } from '../../domain/factory'
-import { ScreenProvider } from '../screens'
+import Home from '../screens/home'
 
-const domainFactory = new DomainFactory()
-const screenProvider = new ScreenProvider(domainFactory)
-
-const routes = () => {
+const routes = {
     Home: {
-        screen: screenProvider.Home(),
-        header: () => ({
-            header: <View />
-        })
+        screen: Home,
     }
 }
 
 const stackConfig = {
     headerMode: 'screen',
-    navigationOptions: ({ navigation: { } }) => ({
-      gesturesEnabled: false,
-      cardStyle: {
-        backgroundColor: '#fff'
-      }
-    })
+    initialRouteName: 'Home',
 }
 
 export default createStackNavigator(routes, stackConfig)

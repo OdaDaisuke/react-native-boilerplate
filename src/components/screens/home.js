@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text } from 'react-native'
 import Button from '../parts/button'
 
-export class Home extends React.Component {
+export default class Home extends React.Component {
     render() {
         return (
             <View>
@@ -10,13 +10,5 @@ export class Home extends React.Component {
                 <Text>home screen</Text>
             </View>
         )
-    }
-}
-
-export class HomeVM {
-    storageClient
-
-    constructor(storage) {
-        this.storageClient = storage
     }
 }
