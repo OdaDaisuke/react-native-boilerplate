@@ -1,8 +1,10 @@
+// @flow
+
 import axios, { AxiosError, AxiosInstance } from "axios"
 
 export class APIClient {
-    private authToken: string | null = null
-    private axios: AxiosInstance
+    authToken: string | null = null
+    axios: AxiosInstance
 
     constructor(baseURL: string) {
         this.axios = axios.create({ baseURL, })
@@ -21,7 +23,7 @@ export class APIClient {
     /*
      * private methods
      */
-     private interceptSetting() {
+    interceptSetting() {
         this.axios.interceptors.request.use((req) => {
             if (this.authToken) {
                 const header = {
@@ -39,7 +41,7 @@ export class APIClient {
         })
     }
 
-    private onError( error: AxiosError | Error ) {
+    onError( error: AxiosError | Error ) {
         throw error
     }
 }

@@ -1,10 +1,11 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
+import styles from '../../styles/Header'
 
 export default ( { title, goBack } ) => {
 
   return (
-    <View>
+    <View style={styles.header}>
         {(() => {
             return goBack ?
             (
@@ -12,10 +13,7 @@ export default ( { title, goBack } ) => {
                 </TouchableOpacity>
             ) : null
         })()}
-
-        <Text>
-            {title}
-        </Text>
+        <Text style={styles.label}>{title}</Text>
     </View>
   )
 }
