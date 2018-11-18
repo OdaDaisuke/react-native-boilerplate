@@ -10,11 +10,11 @@ import SectionHead from '../parts/SectionHead'
 import LatestCarousel from '../parts/LatestCarousel'
 import styles from '../../styles/Container'
 
-const enhancer = compose(
+const enhance = compose(
     observer,
 )
 
-export default enhancer( ( props: Object ) => {
+export default enhance( ( props: Object ) => {
     return (
         <ScrollView>
             <LatestCarousel />

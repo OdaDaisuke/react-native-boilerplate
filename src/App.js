@@ -9,7 +9,7 @@ import { firebaseInit } from './infra/firebase'
 import AppNavigator from './navigator/AppNavigator'
 import { stores } from './stores'
 
-const enhancer = compose(
+const enhance = compose(
     inject("application", "appNavigation"),
     lifecycle({
         async componentDidMount() {
@@ -19,7 +19,7 @@ const enhancer = compose(
     observer,
 )
 
-const App = enhancer(({application, appNavigation}: Object) => {
+const App = enhance(({application, appNavigation}: Object) => {
     const navigation = addNavigationHelpers({
         addListener: () => {},
         dispatch: appNavigation.dispatch,

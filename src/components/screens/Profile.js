@@ -9,11 +9,11 @@ import styles from '../../styles/Container'
 type PropsType = {
 }
 
-const enhancer = compose(
+const enhance = compose(
     observer,
 )
 
-export default enhancer( (props: PropsType) =>{
+export default enhance( (props: PropsType) =>{
     return (
         <View style={styles.container}>
             <Text>profile screen</Text>

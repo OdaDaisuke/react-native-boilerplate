@@ -8,12 +8,12 @@ import Input from '../parts/Input'
 import Button from '../parts/Button'
 import styles from '../../styles/Container'
 
-const enhancer = compose(
+const enhance = compose(
     inject("application"),
     observer,
 )
 
-export default enhancer( ( { application } : Object ) => {
+export default enhance( ( { application } : Object ) => {
     return (
         <View style={styles.container}>
             <View style={styles.signupInner}>
