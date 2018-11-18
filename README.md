@@ -4,6 +4,7 @@
 - Flowtyped
 - Expo
 - Firebase
+- Mobx
 
 ## Requirements
 
