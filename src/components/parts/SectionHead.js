@@ -5,6 +5,7 @@ import { Text } from 'react-native'
 import styles from '../../styles/SectionHead.scss'
 
 type SectionHeadProps = {
+  children: any
 }
 
 export default (props: SectionHeadProps) => {

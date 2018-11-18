@@ -20,10 +20,12 @@ export default class AppNavigatorStore {
             {
                 key: 'Home',
                 routeName: 'Home',
+                params: {},
             },
             {
                 key: "Profile",
                 routeName: "Profile",
+                params: {},
             },
         ]
     }

@@ -1,61 +1,18 @@
+// @flow
+import { AsyncStorage } from 'react-native'
+
 /*
  * 認証管理
  */
-const AUTH_STATUS_KEY = "auth_status"
-const AUTH_TOKEN_KEY = "auth_token"
+const KEY = "user"
 
-export class Auth {
-    storage = localStorage
+export class AuthStorage {
 
-    constructor() {
+    async loadUser() {
+        return await AsyncStorage.getItem(KEY)
     }
 
-    /*
-     * Auth status
-     */
-    saveAuthStatus(authStatus) {
-        this.save(AUTH_STATUS_KEY, JSON.stringify(authStatus))
-    }
-
-    loadAuthStatus() {
-        return this.load(AUTH_STATUS_KEY)
-    }
-
-    destroyAuthStatus() {
-        this.storage.removeItem(AUTH_STATUS_KEY)
-    }
-
-    /*
-     * Auth token
-     */
-    saveAuthToken(authToken) {
-        this.save(AUTH_STATUS_KEY, JSON.stringify(authToken))
-    }
-
-    loadAuthToken() {
-        return this.load(AUTH_TOKEN_KEY)
-    }
-
-    destroyAuthToken() {
-        this.storage.removeItem(AUTH_TOKEN_KEY)
-    }
-
-    /*
-     * private methods
-     */
-    load(key) {
-        try {
-            const v = this.storage.getItem(key)
-            if(v) {
-                return JSON.parse(v)
-            }
-            return null
-        } catch {
-            return null
-        }
-    }
-
-    save(key, content) {
-        this.storage.setItem(key, content)
+    async saveUser(user: Object) {
+        await AsyncStorage.setItem(KEY, JSON.stringify(user))
     }
 }

@@ -5,6 +5,7 @@ import Expo from 'expo'
 import addNavigationHelpers from 'react-navigation/src/addNavigationHelpers'
 import { lifecycle, compose } from 'recompose'
 import { observer, Provider, inject } from 'mobx-react/native'
+import { firebaseInit } from './infra/firebase'
 import AppNavigator from './navigator/AppNavigator'
 import { stores } from './stores'
 
@@ -12,7 +13,7 @@ const enhancer = compose(
     inject("application", "appNavigation"),
     lifecycle({
         async componentDidMount() {
-            // 何か処理
+            firebaseInit()
         }
     }),
     observer,

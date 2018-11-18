@@ -1,15 +1,14 @@
 // @flow
 import { observable, action } from 'mobx'
-
-type NavigationState = {
-    index: number,
-    routes: Array<{
-        key: string,
-        routeName: string,
-        params: Object
-    }>
-}
+import APIClient from '../infra/api'
+import AuthStorage from '../infra/auth'
+import AccountService from '../service/account'
 
 export default class ApplicationStore {
-    @observable sampleStatus: boolean = false
+    /*--- Infra ---*/
+    @observable apiClient = new APIClient()
+    @observable authStorage = new AuthStorage()
+
+    /*--- Services ---*/
+    @observable accountService: AccountService = new AccountService(this.apiClient, this.authStorage)
 }
