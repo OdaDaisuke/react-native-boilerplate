@@ -14,7 +14,7 @@ const enhancer = compose(
     observer,
 )
 
-export default enhancer( ( props: Object) => {
+export default enhancer( ( props: Object ) => {
     return (
         <ScrollView>
             <LatestCarousel />

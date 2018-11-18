@@ -10,5 +10,5 @@ export default class ApplicationStore {
     @observable authStorage = new AuthStorage()
 
     /*--- Services ---*/
-    @observable accountService: AccountService = new AccountService(this.apiClient, this.authStorage)
+    @observable accountService = new AccountService()
 }

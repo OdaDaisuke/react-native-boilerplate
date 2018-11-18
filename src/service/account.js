@@ -6,15 +6,11 @@ export default class AccountService {
 
     user: Object
 
-    constructor(apiClient, authStorage) {
-        this.apiClient = apiClient
-        this.authStorage = authStorage
+    constructor() {
         this.initialize()
     }
 
     initialize() {
-        const user = this.authStorage.loadUser()
-        this.user = user
     }
 
     /*--- Actions ---*/
@@ -22,5 +18,6 @@ export default class AccountService {
     }
 
     async signup() {
+        alert("signup clicked")
     }
 }

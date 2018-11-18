@@ -18,6 +18,11 @@ export default class AppNavigatorStore {
         index: 0,
         routes: [
             {
+                key: "Signup",
+                routeName: "Signup",
+                params: {},
+            },
+            {
                 key: 'Home',
                 routeName: 'Home',
                 params: {},
