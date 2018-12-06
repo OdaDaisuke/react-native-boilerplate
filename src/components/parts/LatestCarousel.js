@@ -9,9 +9,11 @@ import styles from '../../styles/LatestCarousel'
 export default () => {
     const width = Dimensions.get("window").width
     const data = [{
-        title: "新着特集"
+        title: "新着特集",
+        img: require("../../../assets/images/3.jpg"),
     }, {
         title: "注目5選",
+        img: require("../../../assets/images/5.jpg"),
     }]
 
     return (
@@ -21,6 +23,8 @@ export default () => {
                 renderItem={LatestCarouselItem}
                 sliderWidth={width}
                 itemWidth={width}
+                autoplay
+                loop
             />
         </View>
     )

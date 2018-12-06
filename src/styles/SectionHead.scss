@@ -1,7 +1,21 @@
 .label {
+    color: #60606a;
     margin-top: 10px;
     margin-bottom: 15px;
     margin-left: 2px;
-    font-size: 17px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.whiteLabel {
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 2px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.centeredContainer {
+    text-align: center;
 }

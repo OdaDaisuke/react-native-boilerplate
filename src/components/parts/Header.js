@@ -1,15 +1,21 @@
 import React from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { Text, TouchableOpacity } from 'react-native'
+import { LinearGradient } from 'expo'
 import { Ionicons } from '@expo/vector-icons'
 import styles from '../../styles/Header'
 
 export default ( { title, goBack }: Object ) => {
 
   return (
-    <View style={styles.header}>
+    <LinearGradient 
+        colors={['#4c669f', '#3b5998', '#192f6a']} 
+        start={{x: 0.0, y: 1}} 
+        end={{x: 1, y: 1}}
+        style={styles.header}
+    >
         <GoBack onPress={goBack} />
         <Text style={styles.label}>{title}</Text>
-    </View>
+    </LinearGradient>
   )
 }
 

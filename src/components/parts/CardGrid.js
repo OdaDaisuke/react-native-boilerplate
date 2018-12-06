@@ -12,16 +12,22 @@ type CardGridProps = {
 export default (props: CardGridProps) => {
     const data = [{
         title: "SF",
+        img: require("../../../assets/images/3.jpg"),
     }, {
         title: "恋愛",
+        img: require("../../../assets/images/2.jpg"),
     }, {
         title: "ホラー",
+        img: require("../../../assets/images/4.jpg"),
     }, {
         title: "日常",
+        img: require("../../../assets/images/5.jpg"),
     }, {
         title: "ギャグ・お笑い",
+        img: require("../../../assets/images/1.jpg"),
     }, {
         title: "その他",
+        img: require("../../../assets/images/2.jpg"),
     }]
 
     return (

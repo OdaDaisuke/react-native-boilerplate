@@ -1,15 +1,21 @@
 // @flow
 
 import React from 'react'
-import { Text } from 'react-native'
+import { View, Text } from 'react-native'
 import styles from '../../styles/SectionHead.scss'
 
 type SectionHeadProps = {
-  children: any
+  isWhite: boolean,
+  children: any,
+  centered: boolean
 }
 
 export default (props: SectionHeadProps) => {
+  const wrapperStyle = (props.centered) ? styles.centeredContainer: {}
+  const style = (props.isWhite) ? styles.whiteLabel : styles.label
   return (
-    <Text style={styles.label}>{props.children}</Text>
+    <View style={wrapperStyle}>
+      <Text style={style}>{props.children}</Text>
+    </View>
   )
 }

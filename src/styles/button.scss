@@ -1,11 +1,16 @@
 .button {
-    background-color: rgb(7, 71, 166);
     border-radius: 40px;
     display: inline-block;
     flex: auto;
-    margin: 5px 0 10px;
-    padding: 16px 22px;
+    margin: 10px 0 10px;
     min-width: 250px;
+    overflow: hidden;
+}
+
+.innerGrad {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 16px 22px;
 }
 
 .buttonLabel {
