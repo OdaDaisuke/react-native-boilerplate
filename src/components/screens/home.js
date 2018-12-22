@@ -5,7 +5,9 @@ import { View, ScrollView, Text } from 'react-native'
 import { observer } from 'mobx-react/native'
 import { Ionicons } from '@expo/vector-icons'
 import { LinearGradient } from 'expo'
-import { compose } from 'recompose'
+import { compose, lifecycle } from 'recompose'
+import LottieView from 'lottie-react-native'
+import loading from '../../animations/favorite_app_icon.json'
 import Button from '../parts/Button'
 import CardGrid from '../parts/CardGrid'
 import SectionHead from '../parts/SectionHead'
@@ -15,6 +17,13 @@ import styles from '../../styles/Container'
 
 const enhance = compose(
     observer,
+    lifecycle({
+        componentDidMount() {
+            if (this.loadingAnimation) {
+                this.loadingAnimation.play()
+            }
+        }
+    })
 )
 
 export default enhance( ( props: Object ) => {
@@ -36,6 +45,12 @@ export default enhance( ( props: Object ) => {
                     <ArtistListSection />
                 </LinearGradient>
                 <View style={styles.container}>
+                <LottieView
+                    ref={(refs) => {
+                        this.loadingAnimation = refs;
+                    }}
+                    source={loading}
+                />
                     <Button onPress={() => props.navigation.navigate('Profile')}>
                         <Ionicons
                             name="md-checkmark-circle"
