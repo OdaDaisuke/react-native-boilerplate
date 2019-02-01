@@ -2,8 +2,8 @@
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerNgrokUrl": "https://s7-ueq.daisukeoda.react-native-boilerplate.exp.direct",
+  "packagerNgrokUrl": "https://packager.s7-ueq.daisukeoda.react-native-boilerplate.exp.direct",
+  "ngrokPid": 35235,
   "devToolsPort": 19002
 }

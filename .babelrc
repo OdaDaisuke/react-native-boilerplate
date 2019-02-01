@@ -1,6 +1,13 @@
 {
-  "presets": ["react-native", "flow", "react-native-dotenv"],
-  "plugins": [
-    "transform-decorators-legacy"
-  ]
+    "presets": ["babel-preset-expo"],
+    "plugins": [
+    ],
+    "env": {
+        "development": {
+            "plugins": [
+                "transform-react-jsx-source", 
+                "transform-decorators-legacy"
+            ]
+        }
+    }
 }
