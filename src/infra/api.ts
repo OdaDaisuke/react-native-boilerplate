@@ -7,21 +7,18 @@ export default class APIClient {
   constructor(baseURL: string) {
     this.axios = axios.create({ baseURL })
 
-    this.interceptSetting()
+    this.setIntercept()
   }
 
   setAuthToken(authToken: string) {
     this.authToken = authToken
   }
 
-  async testApiConnection() {
+  async testConnection() {
     return await this.axios.get('/sample_endpoint')
   }
 
-  /*
-   * private methods
-   */
-  interceptSetting() {
+  private setIntercept() {
     this.axios.interceptors.request.use(req => {
       if (this.authToken) {
         const header = {
@@ -29,17 +26,9 @@ export default class APIClient {
         }
         req.headers = Object.assign({}, req.headers, header)
       }
+
       return req
     })
-
-    this.axios.interceptors.response.use(
-      res => {
-        return res
-      },
-      error => {
-        this.onError(error)
-      }
-    )
   }
 
   onError(error: AxiosError | Error) {

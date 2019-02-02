@@ -1,4 +1,3 @@
-import { observable, action } from 'mobx'
 import AppNavigator from '../navigator/AppNavigator'
 
 type AppNavigationState = {
@@ -11,9 +10,9 @@ type AppNavigationState = {
 }
 
 export default class AppNavigatorStore {
-  @observable.ref navigation: Object = {}
+  navigation: Object = {}
 
-  @observable.ref navigationState: AppNavigationState = {
+  navigationState: AppNavigationState = {
     index: 0,
     routes: [
       {
@@ -34,7 +33,7 @@ export default class AppNavigatorStore {
     ]
   }
 
-  @action dispatch = (action: any, stackNavState: boolean = true): boolean => {
+  dispatch = (action: any, stackNavState: boolean = true): boolean => {
     const previousNavState = stackNavState ? this.navigationState : null
     this.navigationState = AppNavigator.router.getStateForAction(
       action,
@@ -43,7 +42,7 @@ export default class AppNavigatorStore {
     return true
   }
 
-  @action setNavigation = (navigation: any): void => {
+  setNavigation = (navigation: any): void => {
     this.navigation = navigation
   }
 }

@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react'
 import { View, ScrollView, Text } from 'react-native'
-import { observer } from 'mobx-react/native'
 import { Ionicons } from '@expo/vector-icons'
 import { LinearGradient } from 'expo'
 import { compose, lifecycle } from 'recompose'
@@ -14,7 +13,6 @@ import ArtistListSection from '../parts/ArtistListSection'
 const styles = require('../../styles/Container')
 
 const enhance = compose(
-    observer,
     lifecycle({
         componentDidMount() {
         }

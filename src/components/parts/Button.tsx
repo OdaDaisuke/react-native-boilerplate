@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo'
 const styles = require('../../styles/Button.scss')
 
 type ButtonProps = {
-  onPress: () => void,
+  onPress?: () => void,
   children?: any
 }
 
