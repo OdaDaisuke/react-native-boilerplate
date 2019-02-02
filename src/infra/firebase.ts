@@ -8,14 +8,14 @@
 
 // Initialize Firebase
 const firebaseInit = () => {
-    const firebaseConfig = {
-        apiKey: "FIREBASE_API_KEY",
-        authDomain: "FIREBASE_AUTH_DOMAIN",
-        databaseURL: "FIREBASE_DB_URL",
-        storageBucket: "FIREBASE_STORAGE_BUCKET",
-    }
+  const firebaseConfig = {
+    apiKey: 'FIREBASE_API_KEY',
+    authDomain: 'FIREBASE_AUTH_DOMAIN',
+    databaseURL: 'FIREBASE_DB_URL',
+    storageBucket: 'FIREBASE_STORAGE_BUCKET'
+  }
 
-    // firebase.initializeApp(firebaseConfig)
+  // firebase.initializeApp(firebaseConfig)
 }
 
 export { firebaseInit }

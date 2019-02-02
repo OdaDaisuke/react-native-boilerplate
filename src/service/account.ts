@@ -1,22 +1,20 @@
 import { Alert } from 'react-native'
 
 export default class AccountService {
-    apiClient = null
-    authStorage = null
-    user = null
+  apiClient = null
+  authStorage = null
+  user = null
 
-    constructor() {
-        this.initialize()
-    }
+  constructor() {
+    this.initialize()
+  }
 
-    initialize() {
-    }
+  initialize() {}
 
-    /*--- Actions ---*/
-    async signin() {
-    }
+  /*--- Actions ---*/
+  async signin() {}
 
-    async signup() {
-        Alert.alert("signup clicked")
-    }
+  async signup() {
+    Alert.alert('signup clicked')
+  }
 }
