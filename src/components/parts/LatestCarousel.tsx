@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { View, Dimensions } from 'react-native'
 import Carousel from 'react-native-snap-carousel'
 import LatestCarouselItem from './LatestCarouselItem'

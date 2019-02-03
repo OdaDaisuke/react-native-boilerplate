@@ -1,6 +1,5 @@
 import React from 'react'
 import { Alert, View } from 'react-native'
-import { compose } from 'recompose'
 import Input from '../parts/Input'
 import Button from '../parts/Button'
 const styles = require('../../styles/Container')

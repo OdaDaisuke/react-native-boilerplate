@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { SafeAreaView } from 'react-native'
 import { Provider } from 'react-redux'
 import Expo from 'expo'

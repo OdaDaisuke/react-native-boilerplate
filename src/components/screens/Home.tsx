@@ -1,15 +1,15 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import { View, ScrollView, Text } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { LinearGradient } from 'expo'
 import { compose, lifecycle } from 'recompose'
 import LottieView from 'lottie-react-native'
-const loading = require('../../animations/favorite_app_icon.json')
 import Button from '../parts/Button'
 import CardGrid from '../parts/CardGrid'
 import SectionHead from '../parts/SectionHead'
 import LatestCarousel from '../parts/LatestCarousel'
 import ArtistListSection from '../parts/ArtistListSection'
+// const loading = require('../../animations/favorite_app_icon.json')
 const styles = require('../../styles/Container')
 
 const enhance = compose(
@@ -38,12 +38,6 @@ export default enhance( ( props: any ) => {
                     <ArtistListSection />
                 </LinearGradient>
                 <View style={styles.container}>
-                <LottieView
-                    ref={(refs) => {
-                        // this.loadingAnimation = refs;
-                    }}
-                    source={loading}
-                />
                     <Button onPress={() => props.navigation.navigate('Profile')}>
                         <Ionicons
                             name="md-checkmark-circle"
